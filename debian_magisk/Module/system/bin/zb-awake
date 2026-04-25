@@ -1,0 +1,15 @@
+#!/system/bin/sh
+
+for bl in /sys/class/backlight/*; do
+    if [ -d "$bl" ]; then
+        MAX=$(cat "$bl/max_brightness")
+        echo "$MAX" > "$bl/brightness"
+    fi
+done
+
+start
+
+sysctl -w vm.swappiness=60
+sysctl -w vm.vfs_cache_pressure=100
+
+echo "[ZeroByte] Sistem Uyanıyor. Android arayüzü başlatıldı."

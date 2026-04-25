@@ -1,0 +1,16 @@
+#!/system/bin/sh
+
+stop
+
+for bl in /sys/class/backlight/*; do
+    if [ -d "$bl" ]; then
+        echo 0 > "$bl/brightness"
+    fi
+done
+
+sysctl -w vm.swappiness=100
+sysctl -w vm.vfs_cache_pressure=200
+sync
+echo 3 > /proc/sys/vm/drop_caches
+
+echo "[ZeroByte] Sistem Koma Moduna Girdi. RAM optimize edildi."
