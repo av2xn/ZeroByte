@@ -13,4 +13,4 @@ sysctl -w vm.vfs_cache_pressure=200
 sync
 echo 3 > /proc/sys/vm/drop_caches
 
-echo "[ZeroByte] Sistem Koma Moduna Girdi. RAM optimize edildi."
+echo "[ZeroByte] System is sleeping. RAM optimized."
