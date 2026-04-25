@@ -12,4 +12,4 @@ start
 sysctl -w vm.swappiness=60
 sysctl -w vm.vfs_cache_pressure=100
 
-echo "[ZeroByte] Sistem Uyanıyor. Android arayüzü başlatıldı."
+echo "[ZeroByte] System is awakening. Android interface has started."
